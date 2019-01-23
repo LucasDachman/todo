@@ -1,6 +1,18 @@
 @import url('./normalize.css');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans');
 
+:root {
+    /* https://color.adobe.com/Flat-UI-color-theme-2469224/edit/?copy=true&base=1&rule=Custom&selected=2&name=Copy%20of%20Flat%20UI&mode=rgb&rgbvalues=0.172549,0.243137,0.313725,0.905882,0.298039,0.235294,0.92549,0.941176,0.945098,0.203922,0.596078,0.858824,0.160784,0.501961,0.72549&swatchOrder=0,1,2,3,4 */
+    --dark-blue: #2C3E50;
+    --light-blue: #2980B9;
+    --red: #E74C3C;
+    --white: #ECF0F1;
+}
+
+html {
+    background-color: var(--white);
+}
+
 button {
     background-color: white;
 }
@@ -9,9 +21,23 @@ h1 {
     font-size: 52px;
 }
 
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    background-color: hsla(0, 100%, 100%, 0.95);
+    padding: 35px 0px;
+}
+
 .container {
     width: 80%;
     margin: auto;
+    position: relative;
+    z-index: -1;
+    top: 300px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;

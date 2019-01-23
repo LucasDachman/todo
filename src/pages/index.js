@@ -43,18 +43,22 @@ class Todo extends React.Component {
 
   render() {
     return (
+      <>
+        <header>
+          <h1>Todo</h1>
+          <form className='add-section' onSubmit={this.addItem}>
+            <input type='text' value={this.state.newItemText} onChange={this.setText}/>
+            <input type='submit' value='add' disabled={!this.canSubmit()}/>
+          </form>
+        </header>
       <div className='container'>
-        <h1>Todo</h1>
-        <form className='add-section' onSubmit={this.addItem}>
-          <input type='text' value={this.state.newItemText} onChange={this.setText}/>
-          <input type='submit' value='add' disabled={!this.canSubmit()}/>
-        </form>
         <section className='items-section'>
           {this.state.listItems.map((title, i) => {
             return <ListItem title={`${i+1}. ${title}`} onClickDelete={() => this.removeItem(i)} key={i}/>
           })}
         </section>
       </div>
+      </>
     )
   }
 }
