@@ -39,7 +39,7 @@ class Todo extends React.Component {
         <h1>Todo</h1>
         <section className='add-section'>
           <input type='text' value={this.state.newItemText} onChange={this.setText}/>
-          <button type='button' onClick={this.addItem}>Add</button>
+          <button type='button' onClick={this.addItem} disabled={this.state.newItemText === ''}>Add</button>
         </section>
         <section className='items-section'>
           {this.state.listItems.map((title, i) => {
