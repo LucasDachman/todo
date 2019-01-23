@@ -12,7 +12,11 @@ class Todo extends React.Component {
     }
   }  
 
-  addItem() {
+  addItem(e) {
+    e.preventDefault();
+    if (!this.canSubmit())
+      return
+
     this.setState((state) => {
       return {
         listItems: state.listItems.concat([state.newItemText]),
@@ -33,14 +37,18 @@ class Todo extends React.Component {
     this.setState({newItemText: e.target.value})
   }
 
+  canSubmit() {
+    return this.state.newItemText !== ''
+  }
+
   render() {
     return (
       <div className='container'>
         <h1>Todo</h1>
-        <section className='add-section'>
+        <form className='add-section' onSubmit={this.addItem}>
           <input type='text' value={this.state.newItemText} onChange={this.setText}/>
-          <button type='button' onClick={this.addItem} disabled={this.state.newItemText === ''}>Add</button>
-        </section>
+          <input type='submit' value='add' disabled={!this.canSubmit()}/>
+        </form>
         <section className='items-section'>
           {this.state.listItems.map((title, i) => {
             return <ListItem title={`${i+1}. ${title}`} onClickDelete={() => this.removeItem(i)} key={i}/>
