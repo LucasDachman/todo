@@ -1,0 +1,38 @@
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.todo-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item button {
+    background-color: white;
+    height: 8px;
+}
+
+.todo-item h2 {
+    margin: 0px 10px 0px 0px;
+}
+
+.add-section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.items-section {
+    box-sizing: border-box;
+    margin: 20px auto 0px auto;
+    padding: 10px;
+    width: 20%;
+    min-height: 30px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
