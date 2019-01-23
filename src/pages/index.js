@@ -43,7 +43,7 @@ class Todo extends React.Component {
         </section>
         <section className='items-section'>
           {this.state.listItems.map((title, i) => {
-            return <ListItem title={title} onClickDelete={() => this.removeItem(i)} key={i}/>
+            return <ListItem title={`${i+1}. ${title}`} onClickDelete={() => this.removeItem(i)} key={i}/>
           })}
         </section>
       </div>
@@ -53,8 +53,8 @@ class Todo extends React.Component {
 
 const ListItem = (props) => (
   <div className='todo-item'>
-    <h2>{props.title}</h2>
-    <button type='button' onClick={props.onClickDelete}>Remove</button>
+    <p>{props.title}</p>
+    <button type='button' onClick={props.onClickDelete}>X</button>
   </div>
 )
 

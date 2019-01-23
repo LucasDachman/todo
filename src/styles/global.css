@@ -1,9 +1,21 @@
+@import url('./normalize.css');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans');
+
+button {
+    background-color: white;
+}
+
+h1 {
+    font-size: 52px;
+}
+
 .container {
     width: 80%;
     margin: auto;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 .todo-item {
@@ -11,14 +23,23 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Libre Baskerville', sans-serif;
+    word-break: break-all;
+    box-sizing: border-box;
+    padding: 8px 8px;
+}
+
+.todo-item:nth-child(even) {
+    background-color: lightgray;
 }
 
 .todo-item button {
-    background-color: white;
     height: 8px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 10px;
 }
 
-.todo-item h2 {
+.todo-item p {
     margin: 0px 10px 0px 0px;
 }
 
@@ -30,8 +51,8 @@
 .items-section {
     box-sizing: border-box;
     margin: 20px auto 0px auto;
-    padding: 10px;
-    width: 20%;
+    /* padding: 10px; */
+    width: 40%;
     min-height: 30px;
     border: 1px solid black;
     border-radius: 2px;
