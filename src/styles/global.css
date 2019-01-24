@@ -19,6 +19,7 @@ button {
 
 h1 {
     font-size: 52px;
+    margin: 0.1em 0px;
 }
 
 header {
@@ -29,15 +30,16 @@ header {
     align-items: center;
     text-align: center;
     background-color: hsla(0, 100%, 100%, 0.95);
-    padding: 35px 0px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    z-index: 10;
 }
 
 .container {
     width: 80%;
-    margin: auto;
+    margin: 0px auto 50vh auto;
     position: relative;
-    z-index: -1;
-    top: 300px;
+    top: 80px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -55,8 +57,12 @@ header {
     padding: 8px 8px;
 }
 
-.todo-item:nth-child(even) {
+.todo-item:nth-child(odd) {
     background-color: lightgray;
+}
+
+.todo-item:nth-child(even) {
+    background-color: var(--white);
 }
 
 .todo-item button {
@@ -72,6 +78,9 @@ header {
 .add-section {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px;
 }
 
 .items-section {
