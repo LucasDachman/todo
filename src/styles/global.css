@@ -1,5 +1,5 @@
 @import url('./normalize.css');
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 :root {
     /* https://color.adobe.com/Flat-UI-color-theme-2469224/edit/?copy=true&base=1&rule=Custom&selected=2&name=Copy%20of%20Flat%20UI&mode=rgb&rgbvalues=0.172549,0.243137,0.313725,0.905882,0.298039,0.235294,0.92549,0.941176,0.945098,0.203922,0.596078,0.858824,0.160784,0.501961,0.72549&swatchOrder=0,1,2,3,4 */
@@ -11,6 +11,7 @@
 
 html {
     background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -40,7 +41,6 @@ header {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Libre Baskerville', sans-serif;
     word-break: break-all;
     box-sizing: border-box;
     padding: 8px 8px;
@@ -56,7 +56,7 @@ header {
 
 .todo-item button {
     height: 2em;
-    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-family: sans-serif;
     font-size: 10px;
     background-color: var(--dark-blue);
     color: white;
