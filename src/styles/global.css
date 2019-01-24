@@ -36,7 +36,8 @@ header {
 }
 
 .container {
-    width: 80%;
+    max-width: 80%;
+    min-width: 600px;
     margin: 0px auto 50vh auto;
     position: relative;
     top: 80px;
@@ -66,7 +67,7 @@ header {
 }
 
 .todo-item button {
-    height: 8px;
+    height: 2em;
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-size: 10px;
 }
@@ -86,9 +87,14 @@ header {
 .items-section {
     box-sizing: border-box;
     margin: 20px auto 0px auto;
-    /* padding: 10px; */
     width: 40%;
     min-height: 30px;
     border: 1px solid black;
     border-radius: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+    .items-section {
+        width: 80%;
+    }
 }
