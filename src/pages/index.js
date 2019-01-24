@@ -53,7 +53,7 @@ class Todo extends React.Component {
         })}
         <form className='add-section' onSubmit={this.addItem}>
           <input type='text' value={this.state.newItemText} onChange={this.setText}/>
-          <input type='submit' value='add' disabled={!this.canSubmit()}/>
+          <input type='submit' value='add' className='submit' disabled={!this.canSubmit()}/>
         </form>
       </section>
       </>

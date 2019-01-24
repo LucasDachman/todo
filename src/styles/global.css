@@ -58,6 +58,9 @@ header {
     height: 2em;
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-size: 10px;
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 4px;
 }
 
 .todo-item p {
@@ -70,6 +73,16 @@ header {
     justify-content: center;
     width: 100%;
     margin: 20px 0px;
+}
+
+input[type="submit"] {
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+
+}
+input[type="submit"]:disabled {
+    background-color: lightgray;
 }
 
 .items-section {
